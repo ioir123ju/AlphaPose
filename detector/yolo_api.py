@@ -82,6 +82,7 @@ class YOLODetector(BaseDetector):
                orig_dim_list(torch.FloatTensor, (b,(w,h,w,h))): original mini-batch image size
         Output: dets(torch.cuda.FloatTensor,(n,(batch_idx,x1,y1,x2,y2,c,s,idx of cls))): human detection results
         """
+        print(111111111111111, imgs.shape, orig_dim_list)
         args = self.detector_opt
         _CUDA = True
         if args:
